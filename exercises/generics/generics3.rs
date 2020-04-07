@@ -6,13 +6,14 @@
 // Make the necessary code changes to support alphabetical report cards, thereby making the second
 // test pass.
 
-pub struct ReportCard<T> {
-    pub grade: T,
+// I AM NOT DONE
+pub struct ReportCard {
+    pub grade: f32,
     pub student_name: String,
     pub student_age: u8,
 }
 
-impl<T> ReportCard<T> where T: std::fmt::Display {
+impl ReportCard {
     pub fn print(&self) -> String {
         format!("{} ({}) - achieved a grade of {}", &self.student_name, &self.student_age, &self.grade)
     }
@@ -34,8 +35,9 @@ mod tests {
 
     #[test]
     fn generate_alphabetic_report_card() {
+        // TODO: Make sure to change the grade here after you finish the exercise.
         let report_card = ReportCard {
-            grade: "A+".to_string(), 
+            grade: 2.1, 
             student_name: "Gary Plotter".to_string(), 
             student_age: 11,
         };
